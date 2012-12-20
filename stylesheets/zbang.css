@@ -147,10 +147,12 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-size: 68.8%;
+  height: 100%;
 }
 
-/* line 11, ../sass/_base.scss */
+/* line 12, ../sass/_base.scss */
 body {
+  height: 100%;
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -159,7 +161,7 @@ body {
   background-color: #f3f3f3;
 }
 
-/* line 20, ../sass/_base.scss */
+/* line 22, ../sass/_base.scss */
 strong {
   font-family: "RobotoBold", Arial, sans-serif;
   font-weight: 300;
