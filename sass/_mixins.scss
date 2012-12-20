@@ -1,0 +1,4 @@
+@mixin bold($family, $weight) {
+  font-family: $family;
+  font-weight: $weight;
+}

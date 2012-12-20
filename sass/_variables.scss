@@ -3,15 +3,14 @@ $base-font-size: 11px;
 $base-line-height: $base-font-size * $ratio;
 $font-size: $base-font-size / 1px; //unitless size
 $font-weight: 300;
-$font-weight-bold: 700;
+$font-weight-bold: $font-weight;
 
-//$font-family: "Roboto", Arial, sans-serif;
-//$font-family-bold: "RobotoBold", Arial, sans-serif;
-$font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$font-family-bold: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-family: "Roboto", Arial, sans-serif;
+$font-family-bold: "RobotoBold", Arial, sans-serif;
+//$font-family: "Helvetica", Helvetica, Arial, sans-serif;
+//$font-family-bold: "Helvetica", Helvetica, Arial, sans-serif;
 
-$heading-font-family: $font-family-bold;
-$heading-font-weight: $font-weight-bold;
+$font-family-heading: $font-family-bold;
 
 //modular scale
 $ratio: fifth();

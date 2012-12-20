@@ -1,35 +1,29 @@
 h1, .h1 {
   font-size: relative-size(ms(5), $base-font-size, rem);
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
+  @include bold($font-family-heading, $font-weight-bold);
 }
 
 h2, .h2 {
   font-size: relative-size(ms(4), $base-font-size, rem);
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
+  @include bold($font-family-heading, $font-weight-bold);
 }
 
 h3, .h3 {
   font-size: relative-size(ms(3), $base-font-size, rem);
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
+  @include bold($font-family-heading, $font-weight-bold);
 }
 
 h4, .h4 {
   font-size: relative-size(ms(2), $base-font-size, rem);
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
+  @include bold($font-family-heading, $font-weight-bold);
 }
 
 h5, .h5 {
   font-size: relative-size(ms(1), $base-font-size, rem);
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
+  @include bold($font-family-heading, $font-weight-bold);
 }
 
 h6, .h6 {
   font-size: relative-size(ms(0), $base-font-size, rem);
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
+  @include bold($font-family-heading, $font-weight-bold);
 }

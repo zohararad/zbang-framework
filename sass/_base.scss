@@ -18,5 +18,5 @@ body {
 }
 
 strong{
-  font-weight: $font-weight-bold;
+  @include bold($font-family-bold, $font-weight-bold);
 }
