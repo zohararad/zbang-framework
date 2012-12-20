@@ -1,0 +1,80 @@
+// base on grid solution from http://css-tricks.com/dont-overthink-it-grids/
+
+.row {
+  margin: $half-pad 0;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row {
+    margin: 0 $half-pad / -1;
+  }
+
+  &:first-of-type{
+    margin-top: 0;
+  }
+}
+
+[class*='col-'] {
+  float: left;
+  padding: 0 $half-pad;
+}
+
+// grid specific variables for col width calculations
+$grid-full: 100%;
+$grid-half: $grid-full / 2;
+$grid-third: $grid-full / 3;
+$grid-quarter: $grid-full / 4;
+$grid-eighth: $grid-full / 8;
+
+.col-1-1{
+  width: $grid-full;
+}
+
+.col-2-3 {
+  width: $grid-third * 2;
+}
+
+.col-1-3 {
+  width: $grid-third;
+}
+
+.col-1-2,
+.col-2-4,
+.col-4-8{
+  width: $grid-half;
+}
+
+.col-1-4,
+.col-2-8{
+  width: $grid-quarter;
+}
+
+.col-3-4,
+.col-6-8{
+  width: $grid-quarter * 3;
+}
+
+.col-1-8 {
+  width: $grid-eighth;
+}
+
+.col-3-8 {
+  width: $grid-eighth * 3;
+}
+
+.col-5-8 {
+  width: $grid-eighth * 5;
+}
+
+.col-7-8 {
+  width: $grid-eighth * 7;
+}
+
+/* Opt-in outside padding */
+.row-pad {
+  padding: $half-pad;
+}

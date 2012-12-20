@@ -1,0 +1,11 @@
+.list {
+
+  li {
+    background-color: lighten($body-bg, 5%);
+    border: 1px solid darken($body-bg, 3%);
+    border-radius: 2px;
+    padding-top: $half-pad;
+    padding-bottom: $half-pad;
+  }
+
+}

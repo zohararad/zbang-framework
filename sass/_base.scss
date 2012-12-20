@@ -1,0 +1,22 @@
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  @include fixed-sized-text;
+  @include improve-text-rendering;
+  font-size: ($font-size / 16 * 100%);
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: relative-size(ms(0), $base-font-size, rem);
+  color: $color;
+  line-height: $ratio;
+  background-color: $body-bg;
+}
+
+strong{
+  font-weight: $font-weight-bold;
+}

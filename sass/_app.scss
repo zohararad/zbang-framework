@@ -1,0 +1,115 @@
+.stage {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow: auto;
+  padding: $half-pad;
+
+  &[data-top-bar="yes"]{
+    top: $top-bar-height;
+  }
+
+  &[data-bottom-bar="yes"]{
+    bottom: $bottom-bar-height;
+  }
+}
+
+.top {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  height: $top-bar-height;
+
+  &.nav-bar, .tab{
+    line-height: $top-bar-height;
+  }
+
+  [class*='col']:first-of-type{
+    text-align: left;
+  }
+
+  [class*='col']:last-of-type{
+    text-align: right;
+  }
+}
+
+.bottom {
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height: $bottom-bar-height;
+
+  &.nav-bar, .tab{
+    line-height: $top-bar-height;
+  }
+
+}
+
+.top, .bottom {
+
+  [class*='col']{
+    text-align: center;
+    font-family: $font-family-bold;
+  }
+
+  .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.nav-bar{
+  @include background-image(linear-gradient($nav-bar-highlight, $nav-bar-bg));
+  @include box-shadow(inset 0 -2px 3px darken($nav-bar-bg, 3%));
+  color: $nav-bar-color;
+  @include text-shadow(0 0 1px darken($nav-bar-bg, 30%));
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+    font-size: ms(1);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 3px 8px;
+    border: 1px solid darken($nav-bar-bg, 11%);
+    line-height: 1.1;
+    font-size: ms(0);
+    font-weight: $heading-font-weight;
+    @include background-image(linear-gradient(darken($nav-bar-highlight, 5%), darken($nav-bar-bg, 10%)));
+    border-radius: 2px;
+  }
+}
+
+.tab-bar{
+  @include background-image(linear-gradient(lighten($tab-bar-highlight,5%), darken($tab-bar-bg, 8%)));
+  @include box-shadow(inset 0 2px 3px darken($tab-bar-bg, 3%));
+  color: $tab-bar-color;
+  @include text-shadow(1px 1px 2px darken($tab-bar-bg, 10%));
+
+  .row {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .tab {
+    border-left: 1px solid darken($tab-bar-bg, 5%);
+    border-right: 1px solid lighten($tab-bar-bg, 10%);
+    font-weight: $heading-font-weight;
+
+    &:first-of-type{
+      border-left: none;
+    }
+
+    &:last-of-type{
+      border-right: none;
+    }
+
+    &.active{
+      @include background-image(linear-gradient($tab-bar-bg, $tab-bar-highlight));
+    }
+  }
+}
